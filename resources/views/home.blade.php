@@ -8,15 +8,15 @@
 
         </div>
         <div class="col-9 pt-5">
-            <div><h1>snsuser</h1></div>
+            <div><h1>{{ $user->username }}</h1></div>
             <div class="d-flex">
                 <div class="pr-5"><strong>80</strong> posts</div>
                 <div class="pr-5"><strong>10k</strong> followers</div>
                 <div class="pr-5"><strong>100</strong> following</div>
             </div>
-            <div class="pt-4 font-weight-bold">google.com</div>
-            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-            <div><a href="#">www.google.com</a></div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
         </div>
     </div>
 
