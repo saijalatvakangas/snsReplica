@@ -12,7 +12,7 @@ class ProfilesController extends Controller
      */
     public function index($user)
     {
-        // \App\User::find($user);
+        // Finds the right profile or show 404
         $user = User::findOrFail($user);
 
         return view('profiles.index', [
