@@ -4,15 +4,20 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="https://p0.piqsels.com/preview/85/93/134/laptop-apple-macbook-computer-thumbnail.jpg" class="rounded-circle" style="height: 150px; width: 150px">
+            <img src="{{ $user->profile->profileImage() }}" class="rounded-circle w-100">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
-                <div class="d-flex align-items-baseline">
+                <div class="d-flex align-items-baseline pb-3">
                     <h1 class="pr-3">{{ $user->username }}</h1>
-                    <a href="/profile/{{ $user->id }}/edit">Edit Profile</a>
+                    <button class="btn btn-primary">Follow</button>
+                    @can('update', $user->profile)
+                        <a href="/profile/{{ $user->id }}/edit">Edit Profile</a>
+                    @endcan
                 </div>
-                <a href="/post/create">Add New Post</a>
+                @can('update', $user->profile)
+                    <a href="/post/create">Add New Post</a>
+                @endcan
             </div>
 
             <div class="d-flex">
