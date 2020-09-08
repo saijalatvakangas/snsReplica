@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FollowsController;
+use App\Mail\NewUserWelcomeMail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
+
+// temporary
+Route::get('/email', function () {
+    return new NewUserWelcomeMail();
+});
 
 Route::post('follow/{user}', 'FollowsController@store');
 
