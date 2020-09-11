@@ -40,7 +40,7 @@ class PostsController extends Controller
     {
         $data = request()->validate([
             'caption' => 'required',
-            'image' => 'required|image'
+            'image' => 'required|image|max:2000'
             // 'image' => ['required', 'image'], //same as above
             // 'fieldName => '', // in case a validation is not needed but information is needed to pass forward
         ]);
