@@ -30,10 +30,15 @@
 
                 <div class="row">
                     <label for="image" class="col-md-4 col-form-label">{{ __('Post Image') }}</label>
-                    <input type="file" class="form-control-file" id="image" name="image">
+                    <input type="file" class="form-control-file @error('image') is-invalid @enderror" id="image" name="image">
+                    <small class="form-text text-muted">
+                        Files must be images (jpeg, png, bmp, gif, svg, or webp) less than 2MB
+                    </small><br>
 
                     @error('image')
-                        <strong>{{ $message }}</strong>
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
                     @enderror
                 </div>
 
