@@ -16,7 +16,7 @@
         "laravel/framework": "^7.24",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.1",
-        "phpseclib/bcmath_compat": "1.0.5",
+        "phpseclib/bcmath_compat": "1.0.4",
         "phpseclib/phpseclib": "^2.0",
         "ext-bcmath": "*"
     },
