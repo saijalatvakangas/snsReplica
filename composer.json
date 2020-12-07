@@ -18,7 +18,8 @@
         "laravel/ui": "^2.1",
         "phpseclib/bcmath_compat": "1.0.4",
         "phpseclib/phpseclib": "^2.0",
-        "ext-bcmath": "*"
+        "ext-bcmath": "*",
+        "ext-gd": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
